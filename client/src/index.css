@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* ChittyData Custom Colors */
+  --chitty-blue: hsl(207, 90%, 54%);
+  --chitty-dark: hsl(210, 11%, 4%);
+  --chitty-surface: hsl(210, 11%, 10%);
+  --chitty-border: hsl(210, 11%, 16%);
+  --chitty-success: hsl(180, 100%, 50%);
+  --chitty-warning: hsl(18, 100%, 60%);
+  --chitty-error: hsl(0, 100%, 67%);
+}
+
+.dark {
+  --background: hsl(210, 11%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 11%, 10%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(210, 11%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 11%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(210, 11%, 16%);
+  --input: hsl(210, 11%, 16%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(210, 11%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(210, 11%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+
+  /* ChittyData Dark Theme */
+  --chitty-blue: hsl(207, 90%, 54%);
+  --chitty-dark: hsl(210, 11%, 4%);
+  --chitty-surface: hsl(210, 11%, 10%);
+  --chitty-border: hsl(210, 11%, 16%);
+  --chitty-success: hsl(180, 100%, 50%);
+  --chitty-warning: hsl(18, 100%, 60%);
+  --chitty-error: hsl(0, 100%, 67%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .dark body {
+    background-color: hsl(var(--chitty-dark));
+    color: white;
+  }
+}
+
+@layer components {
+  .chitty-card {
+    @apply bg-chitty-surface border border-chitty-border rounded-xl;
+  }
+
+  .chitty-button-primary {
+    @apply bg-chitty-blue hover:bg-opacity-80 text-white px-4 py-2 rounded-lg transition-colors;
+  }
+
+  .chitty-button-secondary {
+    @apply bg-chitty-surface hover:bg-chitty-border border border-chitty-border text-white px-4 py-2 rounded-lg transition-colors;
+  }
+
+  .chitty-input {
+    @apply bg-chitty-dark border border-chitty-border rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-chitty-blue transition-colors;
+  }
+
+  .chitty-text-success {
+    @apply text-chitty-success;
+  }
+
+  .chitty-text-warning {
+    @apply text-chitty-warning;
+  }
+
+  .chitty-text-error {
+    @apply text-chitty-error;
+  }
+
+  .chitty-bg-success {
+    @apply bg-chitty-success;
+  }
+
+  .chitty-bg-warning {
+    @apply bg-chitty-warning;
+  }
+
+  .chitty-bg-error {
+    @apply bg-chitty-error;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .gradient-blue-success {
+    background: linear-gradient(135deg, var(--chitty-blue), var(--chitty-success));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
