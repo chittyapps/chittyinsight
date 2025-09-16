@@ -58,7 +58,7 @@ export default function Dashboard() {
                 <div className="w-8 h-8 bg-chitty-blue rounded-lg flex items-center justify-center">
                   <i className="fas fa-brain text-white text-sm"></i>
                 </div>
-                <span className="text-xl font-bold">ChittyData</span>
+                <span className="text-xl font-bold">ChittyInsight</span>
               </div>
               <p className="text-sm text-gray-400 mb-4">Powered by Chitty Corp LLC • Your AI Learns Everything You Know</p>
               <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">

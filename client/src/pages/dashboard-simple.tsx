@@ -16,7 +16,7 @@ export default function Dashboard() {
       <div className="min-h-screen bg-chitty-dark text-white flex items-center justify-center">
         <div className="animate-pulse text-chitty-blue">
           <div className="text-4xl mb-4">🧠</div>
-          <div>Loading ChittyData...</div>
+          <div>Loading ChittyInsight...</div>
         </div>
       </div>
     );
@@ -31,7 +31,7 @@ export default function Dashboard() {
               <span className="text-white font-bold">C</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold">ChittyData</h1>
+              <h1 className="text-xl font-bold">ChittyInsight</h1>
               <p className="text-sm text-gray-400">AI Activity Intelligence</p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Dashboard() {
               <div className="space-y-4">
                 <div className="bg-chitty-dark rounded-lg p-4">
                   <p className="text-sm mb-3">
-                    Welcome to ChittyData! I'm analyzing your AI ecosystem and have identified several optimization opportunities.
+                    Welcome to ChittyInsight! I'm analyzing your AI ecosystem and have identified several optimization opportunities.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary" className="bg-chitty-blue/20 text-chitty-blue">
@@ -183,7 +183,7 @@ export default function Dashboard() {
             <div className="w-8 h-8 bg-chitty-blue rounded-lg flex items-center justify-center">
               <span className="text-white text-sm font-bold">C</span>
             </div>
-            <span className="text-xl font-bold">ChittyData</span>
+            <span className="text-xl font-bold">ChittyInsight</span>
           </div>
           <p className="text-sm text-gray-400 mb-4">
             Powered by Chitty Corp LLC • Your AI Learns Everything You Know
