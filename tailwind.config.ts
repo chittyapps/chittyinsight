@@ -61,7 +61,7 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        // ChittyData Custom Colors
+        // ChittyInsight Custom Colors
         "chitty-blue": "var(--chitty-blue)",
         "chitty-dark": "var(--chitty-dark)",
         "chitty-surface": "var(--chitty-surface)",

@@ -1,8 +1,8 @@
-# ChittyData AI Dashboard
+# ChittyInsight AI Dashboard
 
 ## Overview
 
-ChittyData is an AI Activity Intelligence dashboard application that provides real-time monitoring and management of AI agents. The system features a comprehensive interface for tracking AI agent performance, managing orchestrators and workers, monitoring system health metrics, and facilitating chat interactions with AI assistants. Built as a full-stack web application, it combines a React frontend with an Express.js backend, utilizing PostgreSQL for data persistence and real-time WebSocket connections for live updates.
+ChittyInsight is an AI Activity Intelligence dashboard application that provides real-time monitoring and management of AI agents. The system features a comprehensive interface for tracking AI agent performance, managing orchestrators and workers, monitoring system health metrics, and facilitating chat interactions with AI assistants. Built as a full-stack web application, it combines a React frontend with an Express.js backend, utilizing PostgreSQL for data persistence and real-time WebSocket connections for live updates.
 
 ## User Preferences
 
@@ -13,7 +13,7 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Framework**: React with TypeScript, using Vite as the build tool
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **Styling**: Tailwind CSS with custom ChittyData theme variables for consistent branding
+- **Styling**: Tailwind CSS with custom ChittyInsight theme variables for consistent branding
 - **State Management**: TanStack Query (React Query) for server state management and caching
 - **Routing**: Wouter for lightweight client-side routing
 - **Real-time Communication**: Custom WebSocket hook for live data updates
