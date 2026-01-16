@@ -1,0 +1,35 @@
+# ChittyConnect Configuration for chittyinsight
+service:
+  name: chittyinsight
+  display_name: Chittyinsight
+  type: service
+  tier: 4
+  organization: CHITTYOS
+  chitty_id: ${CHITTYINSIGHT_SERVICE_ID}
+  domains:
+    production: insight.chitty.cc
+
+onboarding:
+  endpoint: https://get.chitty.cc/api/onboard
+  provisions: [chitty_id, service_token, certificate, trust_chain]
+
+auth:
+  provider: chittyauth
+  endpoint: https://auth.chitty.cc
+  service_token:
+    source: chittyconnect
+    key: CHITTYINSIGHT_SERVICE_TOKEN
+
+secrets:
+  provider: chittyconnect
+  vault: 1password
+  paths:
+    production: op://ChittyOS/chittyinsight-prod
+
+github:
+  repository: CHITTYOS/chittyinsight
+
+monitoring:
+  health:
+    endpoint: /health
+    interval: 60s
